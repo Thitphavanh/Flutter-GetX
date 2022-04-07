@@ -3,6 +3,7 @@ import 'package:flutter_getx/config/myapp_config.dart';
 import 'package:flutter_getx/config/myapp_theme.dart';
 import 'package:flutter_getx/routes/myapp_page.dart';
 import 'package:flutter_getx/routes/myapp_route.dart';
+import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 class Myapp extends StatelessWidget {
@@ -16,7 +17,7 @@ class Myapp extends StatelessWidget {
       getPages: MyAppPage.routes,
       darkTheme: MyAppTheme.darkTheme,
       theme: MyAppTheme.lightTheme,
-      themeMode: ThemeMode.dark,
+      themeMode: Get.isDarkMode ? ThemeMode.dark : ThemeMode.light,
     );
   }
 }
