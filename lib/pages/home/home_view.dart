@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx/pages/home/home_controller.dart';
+import 'package:flutter_getx/widgets/myapp_drawer.dart';
 import 'package:get/get.dart';
 
 class HomeView extends StatelessWidget {
@@ -12,6 +13,7 @@ class HomeView extends StatelessWidget {
       appBar: AppBar(
         title: Text('HomeView'),
       ),
+      drawer: MyAppDrawer(),
       body: Center(
         child: Obx(
           () => Text('${controller.counter}'),
